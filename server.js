@@ -1,12 +1,14 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const timestamp = require('./routes/timestamp-microservice');
 const requestHeader = require('./routes/request-header-microservice');
 const urlShortener = require('./routes/url-shortener-microservice');
 const exerciseTracker = require('./routes/exercise-tracker');
 const fileMetadata = require('./routes/file-metadata-microservice');
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/timestamp-microservice', timestamp);
 app.use('/request-header-parser-microservice', requestHeader);
