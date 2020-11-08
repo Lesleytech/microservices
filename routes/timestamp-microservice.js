@@ -17,7 +17,7 @@ router.get('/api/timestamp', (req, res) => {
 router.get('/api/timestamp/:dateString', (req, res) => {
   const { dateString } = req.params;
 
-  const { isValid, date } = validateDate(dateString);
+  const { isValid, date, error } = validateDate(dateString);
 
   if (isValid) {
     res.json({
@@ -25,7 +25,7 @@ router.get('/api/timestamp/:dateString', (req, res) => {
       utc: date.toUTCString(),
     });
   } else {
-    res.status(400).json({ error: 'Invalid Date' });
+    res.status(400).json({ error });
   }
 });
 

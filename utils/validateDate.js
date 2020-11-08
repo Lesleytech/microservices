@@ -11,7 +11,7 @@ const validateDate = (date) => {
     }
   }
 
-  return { isValid: false };
+  return { isValid: false, error: new Date(date).toString() };
 };
 
 module.exports = { validateDate };
