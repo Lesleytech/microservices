@@ -25,7 +25,7 @@ router.get('/api/timestamp/:dateString', (req, res) => {
       utc: date.toUTCString(),
     });
   } else {
-    res.status(400).json({ error });
+    res.json({ error });
   }
 });
 
