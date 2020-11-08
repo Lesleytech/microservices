@@ -2,14 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>URL Shortener Microservice</title>
 </head>
 
 <body>
-    <h1>URL Shortener Microservice</h1>
+    <main>
+        <div class="container">
+            <h2>URL Shortener Microservice</h2>
+            <hr />
+            <h3>Short URL Creation</h3>
+            <p>
+                example: <code>POST [project_url]/api/shorturl/new</code> -
+                <code>https://www.google.com</code>
+            </p>
+            <form action="url-shortener-microservice/api/shorturl/new" method="POST">
+                <label for="url_input">URL to be shortened</label>
+                <input id="url_input" type="text" name="url" placeholder="Enter url" />
+                <input type="submit" value="POST URL" />
+            </form>
+            <h3>Example Usage:</h3>
+            <a href="url-shortener-microservice/api/shorturl/0">
+                [this_project_url]/api/shorturl/3
+            </a>
+
+            <h3>Will Redirect to:</h3>
+            <p>https://github.com/lesleytech</p>
+        </div>
+        <div>
+            <p>by <a href="https://github.com/lesleytech">Lafen Lesley</a></p>
+        </div>
+    </main>
 </body>
 
 </html>

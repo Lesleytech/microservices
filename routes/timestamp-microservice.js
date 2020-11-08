@@ -1,6 +1,6 @@
+const path = require('path');
 const { Router } = require('express');
 const router = Router();
-const path = require('path');
 const { validateDate } = require('../utils/validateDate');
 
 router.get('/', (req, res) => [
