@@ -9,7 +9,28 @@
 </head>
 
 <body>
-    <h1>File Metadata Microservice</h1>
+    <main>
+        <div>
+            <h2>File Metadata Microservice</h2>
+            <h3>Usage:</h3>
+            <p>
+                Please Upload a File ...
+            </p>
+            <div class="view">
+                <h4 id="output"></h4>
+                <form enctype="multipart/form-data" method="POST" action="file-metadata-microservice/api/fileanalyse">
+                    <input id="inputfield" type="file" name="upfile">
+                    <input id="button" type="submit" value="Upload">
+                </form>
+            </div>
+        </div>
+        <div>
+            <p>
+                by
+                <a href="http://github.com/lesleytech">Lafen Lesley</a>
+            </p>
+        </div>
+    </main>
 </body>
 
 </html>
