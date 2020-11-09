@@ -20,7 +20,7 @@ Run `npm install` or `yarn install` to install all dependencies.
 
 ## Usage
 
-To begin,
+**To begin,**
 
 1. Create a new cluster on MongoDB Atlas following this [guide](https://docs.atlas.mongodb.com/getting-started/).
 2. Copy the connection string from the MongoDB account page.
@@ -34,7 +34,7 @@ To begin,
 
 4. If you have MongoDB and MongoDB Compass installed, you can run your database locally.
 
-Finally, run:
+**Finally, run:**
 
 `npm start` to start the server on port 5000.
 
