@@ -10,7 +10,11 @@ const urlShortener = require('./routes/url-shortener-microservice');
 const exerciseTracker = require('./routes/exercise-tracker');
 const fileMetadata = require('./routes/file-metadata-microservice');
 
-require('dotenv').config();
+const env = process.env.NODE_ENV || 'development';
+
+if (env === 'development') {
+  require('dotenv').config();
+}
 
 mongoose
   .connect(process.env.MONGO_URI, {
