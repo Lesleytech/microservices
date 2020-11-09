@@ -39,7 +39,7 @@ async function addUrl(url) {
 
   const newUrl = new Url({
     original_url: url,
-    short_url: numDocs + 1,
+    short_url: numDocs,
   });
 
   return await newUrl.save();
