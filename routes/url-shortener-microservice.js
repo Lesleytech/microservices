@@ -1,6 +1,7 @@
 const path = require('path');
 const { Router } = require('express');
 const mongoose = require('mongoose');
+const isUrl = require('validator/lib/isURL');
 const router = Router();
 
 const urlSchema = new mongoose.Schema({
@@ -25,8 +26,12 @@ router.get('/api/shorturl/:short_url', async (req, res) => {
 
 router.post('/api/shorturl/new', async (req, res) => {
   const { url: _url } = req.body;
-  const { original_url, short_url } = await addUrl(_url);
 
+  if (!isUrl(_url)) {
+    return res.json({ error: 'Invalid URL' });
+  }
+
+  const { original_url, short_url } = await addUrl(_url);
   res.json({ original_url, short_url });
 });
 
