@@ -12,8 +12,9 @@ router.get('/', (req, res) => {
 
 router.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   const { file } = req;
+  const { originalname: name, mimetype: type, size } = file;
 
-  res.json({ name: file.originalname, type: file.mimetype, size: file.size });
+  res.json({ name, type, size });
 });
 
 module.exports = router;
