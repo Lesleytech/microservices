@@ -1,7 +1,5 @@
 # APIs and Microservices
 
----
-
 ## Introduction
 
 This is my solution to the APIs and Microservices Certification on [freeCodeCamp](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/). The live project is available via [this link](https://lesleytech-microservices.herokuapp.com).
