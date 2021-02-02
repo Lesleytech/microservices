@@ -54,7 +54,7 @@ router.post('/api/exercise/add', async (req, res) => {
     username,
     description,
     duration,
-    date,
+    date: dayjs(date).format('ddd MMM DD YYYY'),
   });
 });
 
