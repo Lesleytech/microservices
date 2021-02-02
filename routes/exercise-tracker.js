@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 
 router.post('/api/exercise/new-user', async (req, res) => {
   const { username } = req.body;
-  let user = await User.find({ username });
+  let user = await User.findOne({ username });
 
   if (user) return res.status(400).send('Username already taken');
 
